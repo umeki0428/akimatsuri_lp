@@ -1,0 +1,135 @@
+@charset "UTF-8";
+// ==========================================================================
+// Utility
+// モジュールの設定
+// ==========================================================================
+
+
+// hidden
+// ----------------------------------------------------------------- //
+
+.u-hidden {
+	display: none !important;
+}
+
+.u-hidden--sp {
+	@media #{$sp} {
+		display: none !important;
+	}
+}
+
+.u-hidden--pc {
+	@media #{$tbpc} {
+		display: none !important;
+	}
+}
+
+
+
+// align
+// ----------------------------------------------------------------- //
+
+.u-left {
+	text-align: left;
+}
+.u-left--pc {
+	@media #{$tbpc} {
+		text-align: left;
+	}
+}
+.u-left--sp {
+	@media #{$sp} {
+		text-align: left;
+	}
+}
+
+.u-center {
+	text-align: center;
+}
+.u-center--pc {
+	@media #{$tbpc} {
+		text-align: center;
+	}
+}
+.u-center--sp {
+	@media #{$sp} {
+		text-align: center;
+	}
+}
+
+.u-right {
+	text-align: right;
+}
+.u-right--pc {
+	@media #{$tbpc} {
+		text-align: right;
+	}
+}
+.u-right--sp {
+	@media #{$sp} {
+		text-align: right;
+	}
+}
+
+
+
+// space
+// ----------------------------------------------------------------- //
+
+// スペースの配列化
+$arraySpace: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 25, 28, 30, 35, 40, 45, 50;
+
+// margin
+@each $key in $arraySpace{
+	.u-mb-#{$key} {
+		margin-bottom: #{$key}px;
+	}
+	.u-mt-#{$key} {
+		margin-top: #{$key}px;
+	}
+	.u-ml-#{$key} {
+		margin-left: #{$key}px;
+	}
+	.u-mr-#{$key} {
+		margin-right: #{$key}px;
+	}
+	@media #{$sp} {
+		.u-mb-#{$key}--sp {
+			margin-bottom: #{$key}px;
+		}
+		.u-mt-#{$key}--sp {
+			margin-top: #{$key}px;
+		}
+		.u-ml-#{$key}--sp {
+			margin-left: #{$key}px;
+		}
+		.u-mr-#{$key}--sp {
+			margin-right: #{$key}px;
+		}
+	}
+	@media #{$tbpc} {
+		.u-mb-#{$key}--pc {
+			margin-bottom: #{$key}px;
+		}
+		.u-mt-#{$key}--pc {
+			margin-top: #{$key}px;
+		}
+		.u-ml-#{$key}--pc {
+			margin-left: #{$key}px;
+		}
+		.u-mr-#{$key}--pc {
+			margin-right: #{$key}px;
+		}
+	}
+}
+
+
+// other
+// ----------------------------------------------------------------- //
+.u-clearfix:after {
+	content:"";
+	display:block;
+	clear:both;
+}
+
+

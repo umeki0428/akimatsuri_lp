@@ -1,0 +1,55 @@
+@charset "UTF-8";
+// ==========================================================================
+// Home
+// TOPページの設定
+// ==========================================================================
+
+.fv {
+	position: relative;
+	z-index: 1;
+}
+
+.fv-cta {
+	display: block;
+	width: 240px;
+	height: auto;
+	position: absolute;
+	bottom: 80px;
+	right: 0;
+	left: 0;
+	margin: auto;
+}
+
+.fv-text {
+	display: block;
+	width: 345px;
+	position: absolute;
+	bottom: 15px;
+	right: 0;
+	left: 0;
+	margin: auto;
+}
+
+.content {
+	background: url(../../assets/images/bk_momiji.png)no-repeat;
+	background-size: cover;
+	img {
+		margin-bottom: 20px;
+	}
+}
+
+.footer-cta {
+	width: 100%;
+	height: auto;
+	margin: 80px 0;
+	img {
+		width: 240px;
+		height: auto;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.copyright {
+	margin-bottom: 0!important;
+}

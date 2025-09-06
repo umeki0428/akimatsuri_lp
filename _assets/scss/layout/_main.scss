@@ -1,0 +1,167 @@
+@charset "UTF-8";
+// ==========================================================================
+// Main
+// メインフレームの記述
+// ==========================================================================
+
+.fade {
+	transition: all ease-in-out .5s;
+	transform: translateY(3px);
+	opacity: 0;
+	&.show {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.rotateL {
+	&.show {
+		animation-name: rotateL;
+		animation-duration: 1s;
+		animation-iteration-count: forwards;
+	}
+}
+
+@keyframes rotateL {
+	0% {
+		transform: rotate(0);
+	}
+	50% {
+		transform: rotate(3deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+.rotateR {
+	&.show {
+		animation-name: rotateR;
+		animation-duration: 1s;
+		animation-iteration-count: forwards;
+	}
+}
+
+@keyframes rotateR {
+	0% {
+		transform: rotate(0);
+	}
+	50% {
+		transform: rotate(-3deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+
+.container {
+	position: relative;
+	color: #3C3C41;
+	z-index: 1;
+	@media #{$tbpc} {
+		&:after {
+			content: "";
+			position: fixed;
+			background-color: #D56244;
+			height: 7.8rem;
+			width: 100%;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+		}
+	}
+}
+
+
+.page-logo {
+	display: none;
+	a {
+		display: block;
+	}
+	@media #{$tbpc} {
+		display: block;
+		max-width: 23.4rem;
+		position: fixed;
+		left: 7rem;
+		top: 3.5rem;
+		z-index: 1;
+	}
+}
+
+
+.md-cta {
+	display: none;
+	@media #{$tbpc} {
+		display: block;
+		position: fixed;
+		bottom: 15rem;
+		width: 38vw;
+		right: calc(16vw + 50rem);
+		left: 5vw;
+		margin: auto;
+	}
+}
+
+.md-cta__image {
+	// max-width: 40rem;
+	margin: auto;
+	margin-bottom: 30px;
+}
+
+.md-links {
+	// margin-top: 1.5rem;
+	// display: flex;
+	// align-items: center;
+	// gap: 2.4rem;
+}
+
+.md-banner {
+	width: 35%;
+	box-shadow: 3px 3px 5px rgba($color: #000000, $alpha: .25);
+}
+
+.md-cta__btn {
+	display: block;
+	width: 300px;
+	margin: 0 auto;
+}
+
+.md-cta__headline {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.md-cta__headline img {
+	width: 320px;
+}
+
+.gallery {
+	margin-top: 4.5rem;
+}
+
+.md-character {
+	display: none;
+	@media #{$tbpc} {
+		display: block;
+		max-width: 19rem;
+		position: fixed;
+		right: 3rem;
+		bottom: 11rem;
+		z-index: 1;
+		width: 12vw;
+	}
+}
+
+
+.contents {
+	max-width: 40rem;
+	margin: 0 auto;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba($color: #000000, $alpha: .3);
+	position: relative;
+	z-index: 10;
+	background-color: #F1EDE7;
+	@media #{$tbpc} {
+		margin: 0 17vw 0 auto;
+	}
+}

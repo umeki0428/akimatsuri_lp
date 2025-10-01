@@ -62,7 +62,7 @@
 		&:after {
 			content: "";
 			position: fixed;
-			background-color: #D56244;
+			background-color: #D56244!important;
 			height: 7.8rem;
 			width: 100%;
 			bottom: 0;
@@ -92,13 +92,13 @@
 .md-cta {
 	display: none;
 	@media #{$tbpc} {
-		display: block;
+		display: block!important;
 		position: fixed;
-		bottom: 15rem;
-		width: 38vw;
-		right: calc(16vw + 50rem);
-		left: 5vw;
-		margin: auto;
+		bottom: 15rem!important;
+		width: 38vw!important;
+		right: calc(16vw + 50rem)!important;
+		left: 5vw!important;
+		margin: auto!important;
 	}
 }
 
